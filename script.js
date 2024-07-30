@@ -18,22 +18,3 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const ctaButton = document.querySelector(".cta-button");
-
-  ctaButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
-  });
-
-  const navLinks = document.querySelectorAll("nav ul li a");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      document
-        .querySelector(e.target.getAttribute("href"))
-        .scrollIntoView({ behavior: "smooth" });
-    });
-  });
-});
