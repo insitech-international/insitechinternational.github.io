@@ -1493,3 +1493,33 @@ span#main {
   background: var(--main-color);
 }
 /* .side-mobile-menu end*/
+
+/* Contact form css */
+.theme-bg {
+    background-color: #2c3e50;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-light {
+    color: #ecf0f1;
+}
+
+.hover-white:hover {
+    color: #ffffff;
+}
+
+.form-color {
+    color: #333;
+    background-color: #ecf0f1;
+}
+
+.btn.theme-bg {
+    background-color: #3498db;
+}
+
+.btn.theme-bg:hover {
+    background-color: #2980b9;
+}

@@ -296,29 +296,4 @@
       1500
     );
   });
-
-  // Hero section video clip
-  document.addEventListener("DOMContentLoaded", function () {
-    const video = document.querySelector(".hero-video");
-    const playButton = document.querySelector(".play-button");
-    const videoOverlay = document.querySelector(".video-overlay");
-
-    playButton.addEventListener("click", function () {
-      if (video.paused) {
-        video.play();
-        videoOverlay.style.display = "none";
-      } else {
-        video.pause();
-        videoOverlay.style.display = "flex";
-      }
-    });
-
-    // Fallback to poster image if video fails to load
-    video.addEventListener("error", function () {
-      video.style.display = "none";
-      videoOverlay.style.backgroundImage = `url(${video.poster})`;
-      videoOverlay.style.backgroundSize = "cover";
-      videoOverlay.style.backgroundPosition = "center";
-    });
-  });
 })(jQuery);

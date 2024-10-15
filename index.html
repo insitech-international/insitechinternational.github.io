@@ -34,6 +34,7 @@
 
 
     <!-- All css here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/flaticon.css">
@@ -3329,7 +3330,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="title text-center">
                             <span class="meta-text-color text-uppercase d-block mb-6">Contact Us</span>
-                            <h2>Let's Start A New Project</h2>
+                            <h2 class="text-white">Let's Start A New Project</h2>
                         </div>
                     </div>
                 </div>
@@ -3339,38 +3340,38 @@
                             <ul class="contact-info-content">
                                 <li class="contact-location s-contact mb-20 transition-3 d-lg-flex align-items-center">
                                     <div class="contact-icon d-inline-block text-center mr-30 transition5">
-                                        <span class="d-inline-block">
+                                        <span class="d-inline-block text-white">
                                             <i class="fas fa-map-marker-alt"></i>
                                         </span>
                                     </div>
                                     <div class="contact-text d-inline-block">
-                                        <h4 class="mb-2">Location</h4>
-                                        <p class="text-color mb-0">Walsall, West Midlands, UK</p>
+                                        <h4 class="mb-2 text-white">Location</h4>
+                                        <p class="text-light mb-0">Walsall, West Midlands, UK</p>
                                     </div>
                                 </li>
                                 <li class="contact-email s-contact mb-20 transition-3 d-lg-flex align-items-center">
                                     <div class="contact-icon d-inline-block text-center mr-30 transition5">
-                                        <span class="d-inline-block">
+                                        <span class="d-inline-block text-white">
                                             <i class="fas fa-phone-alt"></i>
                                         </span>
                                     </div>
                                     <div class="contact-text">
-                                        <h4 class="mb-2">Phone</h4>
+                                        <h4 class="mb-2 text-white">Phone</h4>
                                         <p class="mb-0">
-                                            <a class="text-color primary-hover d-block" href="#">+123 456 7890</a>
+                                            <a class="text-light hover-white" href="#">+123 456 7890</a>
                                         </p>
                                     </div>
                                 </li>
                                 <li class="contact-phone s-contact mb-20 transition-3 d-lg-flex align-items-center">
                                     <div class="contact-icon d-inline-block text-center mr-30 transition5">
-                                        <span class="d-inline-block">
+                                        <span class="d-inline-block text-white">
                                             <i class="fas fa-envelope"></i>
                                         </span>
                                     </div>
                                     <div class="contact-text d-inline-block">
-                                        <h4 class="mb-2">Email</h4>
+                                        <h4 class="mb-2 text-white">Email</h4>
                                         <p class="mb-0">
-                                            <a class="text-color primary-hover d-block"
+                                            <a class="text-light hover-white"
                                                 href="#">info@insitechinternational.com</a>
                                         </p>
                                     </div>
@@ -3454,7 +3455,27 @@
             <span class="pl-4">Exploring the Future of Tech with Data and Python *</span>
         </div>
     </div>
-    </div><!-- /marquee -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="responseModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="responseModalLabel">Message Status</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalMessage">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /marquee -->
     <!-- contact-area-end  -->
 
 
@@ -3562,7 +3583,8 @@
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- knob-js -->
     <script src="js/jquery-appear.js"></script>
     <script src="js/jquery-knob.js"></script>
@@ -3582,6 +3604,7 @@
     <script src="js/ajax-form.js"></script>
     <script src="js/vanilla-tilt.min.js"></script>
     <script src="js/jquery.meanmenu.min.js"></script>
+
     <script src="js/main.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
