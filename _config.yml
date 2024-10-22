@@ -1,0 +1,11 @@
+title: Insitech International
+url: "https://insitechinternational.com"
+baseurl: ""
+
+# Include subdirectory sites
+include:
+  - code-clarity
+
+# Jekyll settings
+markdown: kramdown
+plugins: []
