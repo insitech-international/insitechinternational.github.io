@@ -1,0 +1,107 @@
+/* components/Brand/Brand.module.css */
+
+.brandSection {
+    @apply py-16 overflow-hidden bg-white;
+  }
+  
+  .brandWrapper {
+    @apply relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .brandSlider {
+    @apply flex items-center justify-start gap-12;
+    animation: slide 30s linear infinite;
+    /* Make sure the width is enough to accommodate all logos */
+    width: max-content;
+  }
+  
+  .brandItem {
+    @apply flex-shrink-0 transition-transform duration-300;
+  }
+  
+  .brandLink {
+    @apply block px-6 py-4 transition-opacity duration-300 hover:opacity-75;
+  }
+  
+  .imageWrapper {
+    @apply relative w-[150px] h-20 flex items-center justify-center;
+  }
+  
+  .brandImage {
+    @apply object-contain filter grayscale hover:grayscale-0 transition-all duration-300;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .borderBottom {
+    @apply mt-8 border-b border-gray-200 max-w-7xl mx-auto;
+  }
+  
+  /* Animation for infinite scroll */
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Pause animation on hover */
+  .brandSlider:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .brandSlider {
+      gap: 8px;
+    }
+  
+    .brandLink {
+      @apply px-4 py-3;
+    }
+  
+    .imageWrapper {
+      width: 120px;
+      height: 60px;
+    }
+  }
+  
+  /* Add custom hover effect */
+  .brandItem::after {
+    content: '';
+    @apply absolute inset-0 bg-white opacity-0 transition-opacity duration-300 rounded-lg;
+  }
+  
+  .brandItem:hover::after {
+    @apply opacity-10;
+  }
+  
+  /* Add subtle shadow effect */
+  .brandLink {
+    @apply hover:shadow-lg rounded-lg;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Custom scrollbar for horizontal scrolling on mobile */
+  @media (max-width: 640px) {
+    .brandWrapper {
+      @apply overflow-x-auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #CBD5E0 #F7FAFC;
+    }
+  
+    .brandWrapper::-webkit-scrollbar {
+      height: 6px;
+    }
+  
+    .brandWrapper::-webkit-scrollbar-track {
+      @apply bg-gray-100 rounded-full;
+    }
+  
+    .brandWrapper::-webkit-scrollbar-thumb {
+      @apply bg-gray-300 rounded-full;
+    }
+  }

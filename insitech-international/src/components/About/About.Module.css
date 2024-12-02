@@ -1,0 +1,103 @@
+/* components/About/About.module.css */
+
+.aboutSection {
+    @apply py-24 overflow-hidden;
+  }
+  
+  .aboutWrapper {
+    @apply relative;
+  }
+  
+  .imageWrapper {
+    @apply relative mb-12 lg:mb-0;
+  }
+  
+  .imageContainer {
+    @apply relative;
+  }
+  
+  .imageBox {
+    @apply relative rounded-lg overflow-hidden shadow-lg;
+    transform-style: preserve-3d;
+  }
+  
+  .mainImage {
+    @apply w-full h-auto rounded-lg transition-transform duration-500;
+  }
+  
+  .shape1, .shape2 {
+    @apply absolute bg-blue-50 rounded-lg;
+  }
+  
+  .shape1 {
+    @apply -left-8 -bottom-8 w-full h-full -z-10;
+  }
+  
+  .shape2 {
+    @apply -right-8 -top-8 w-4/5 h-4/5 -z-10;
+  }
+  
+  .downloadWrapper {
+    @apply absolute -right-4 -bottom-4 w-32 h-32 flex items-center justify-center;
+  }
+  
+  .downloadBg {
+    @apply absolute w-full h-full animate-spin-slow;
+  }
+  
+  .downloadLink {
+    @apply relative z-10 transform hover:scale-110 transition-transform duration-300;
+  }
+  
+  .contentWrapper {
+    @apply flex flex-col justify-center;
+  }
+  
+  .subtitle {
+    @apply text-blue-600 uppercase text-sm font-semibold mb-4;
+  }
+  
+  .title {
+    @apply text-4xl font-bold mb-6 text-gray-900;
+  }
+  
+  .description p {
+    @apply text-gray-600 mb-6 leading-relaxed;
+  }
+  
+  .infoGrid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 my-8 p-6 bg-gray-50 rounded-lg;
+  }
+  
+  .signatureSection {
+    @apply flex items-center gap-6 mt-8;
+  }
+  
+  .signature img {
+    @apply max-w-[180px];
+  }
+  
+  .signatureText {
+    @apply flex flex-col;
+  }
+  
+  .signatureText h6 {
+    @apply font-semibold text-gray-900;
+  }
+  
+  .signatureText span {
+    @apply text-gray-600 text-sm;
+  }
+  
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
